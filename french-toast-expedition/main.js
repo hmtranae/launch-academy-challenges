@@ -1,8 +1,8 @@
 // your code, here
-let bread = 1.99;
-let milk = 3.89;
-let eggs = 2.29;
+const bread = 1.99;
+const milk = 3.89;
+const eggs = 2.29;
 
-let sum = 3 * (bread + milk + eggs);
+const sum = 3 * (bread + milk + eggs);
 
 console.log('The total is $' + sum.toFixed(2));
