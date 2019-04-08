@@ -8,18 +8,18 @@ let gamesWon = 0;
 let gamesLost = 0;
 
 while (numGames > 0) {
-    let diceRollOne = Math.floor(((Math.random() * 6) + 1))
-    let diceRollTwo = Math.floor(((Math.random() * 6) + 1))
-    console.log(`You rolled a ${diceRollOne} and a ${diceRollTwo}`)
+  const diceRollOne = Math.floor(((Math.random() * 6) + 1))
+  const diceRollTwo = Math.floor(((Math.random() * 6) + 1))
+  console.log(`You rolled a ${diceRollOne} and a ${diceRollTwo}`)
 
-    if ((diceRollOne === diceRollTwo) && (diceRollOne & 2) === 0) {
-        console.log('You won');
-        gamesWon++;
-    } else {
-        console.log('You lost');
-        gamesLost++;
-    }
-    numGames--
+  if ((diceRollOne === diceRollTwo) && (diceRollOne & 2) === 0) {
+    console.log('You won');
+    gamesWon += 1;
+  } else {
+    console.log('You lost');
+    gamesLost += 1;
+  }
+  numGames -= 1;
 }
 
 console.log(`You won ${gamesWon} game(s) and lost ${gamesLost} game(s)`)
