@@ -1,0 +1,19 @@
+{
+    "eslint.autoFixOnSave": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontSize": 18,
+    "editor.fontLigatures": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "files.trimFinalNewlines": true,
+    "window.zoomLevel": -1,
+    "editor.renderLineHighlight": "all",
+    "editor.selectionHighlight": true,
+    "editor.detectIndentation": true,
+    "editor.renderIndentGuides": false,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "jsx-sublime-babel-tags": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showExpandedAbbreviation": "never",
+}
