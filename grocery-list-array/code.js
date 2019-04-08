@@ -26,11 +26,15 @@ while (shoppingList.length > 0) {
 }
 
 // Sorts the items in your cart alphabetically... backwards
+// const sortedArray = shoppingCart.sort((a, b) => {
+//   if (a < b) {
+//     return 1;
+//   }
+//   return -1;
+// });
+
 const sortedArray = shoppingCart.sort((a, b) => {
-  if (a < b) {
-    return 1;
-  }
-  return -1;
+  return (a < b) ? 1 : -1;
 });
 
 console.log(sortedArray);
