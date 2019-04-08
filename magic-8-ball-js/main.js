@@ -38,7 +38,8 @@ const numAffirm = responses.filter(response => response.includes('yes')).length;
 console.log(`Number of responses that include "yes" is ${numAffirm}`);
 
 // Output the number of responses that include the words "no" or "not"
-const numNegative = responses.filter(response => (response.includes('no') || response.includes('not'))).length;
+const negativeResponses = responses.filter(response => (response.includes('no') || response.includes('not')));
+const numNegative = negativeResponses.length;
 
 console.log(`Number of responses that include "no" or "not" is ${numNegative}`);
 
@@ -53,12 +54,19 @@ console.log(`The first response is ${sortedResponses[0]}.`);
 console.log(`The last response is ${sortedResponses[sortedResponses.length - 1]}`);
 
 // Delete two of the negative responses
+/*
 let counter = 0;
 while (counter < 2) {
   const negativeResponse = sortedResponses.find(ele => (ele.includes('no') || ele.includes('not')));
   sortedResponses.splice(sortedResponses.indexOf(negativeResponse), 1);
   counter += 1;
 }
+*/
+negativeResponses.slice(0, 2).forEach((element) => {
+  sortedResponses.splice(sortedResponses.indexOf(element), 1);
+});
+
+console.log(sortedResponses);
 
 console.log('');
 console.log('The responses array after the deletion of 2 negative responses');
