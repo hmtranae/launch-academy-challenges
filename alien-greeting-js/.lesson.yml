@@ -1,0 +1,7 @@
+---
+title: "Alien Greeting JS"
+type: "exercise"
+description: "Greet aliens as they arrive with a method that requires an argument"
+tags: "functions, parameters, arguments"
+ignore:
+  - "alien-greeting-js.md"
