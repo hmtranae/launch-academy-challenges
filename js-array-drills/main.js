@@ -46,12 +46,23 @@ console.log(`The students who have an 'i' in their name are ${whichStudents()}.`
 // Return the teacher who has the given student in their room
 
 const whichTeacher = (student) => {
-  for (let room = 0; room < rooms.length; room += 1) {
-    if (rooms[room].includes(student)) {
-      return teachers[room];
+  let teacher;
+  rooms.forEach((room, index) => {
+    if (room.includes(student)) {
+      teacher = teachers[index];
+      return teacher;
     }
-  }
+  });
+  return teacher;
 };
+
+// const whichTeacher = (student) => {
+//   for (let room = 0; room < rooms.length; room += 1) {
+//     if (rooms[room].includes(student)) {
+//       return teachers[room];
+//     }
+//   }
+// };
 
 console.log(`The teacher who has Jorge is ${whichTeacher('Jorge')}.`);
 console.log(`The teacher who has Alexa is ${whichTeacher('Alexa')}.`);
