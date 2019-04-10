@@ -180,4 +180,26 @@ console.log(randomDefinition(inversedDictionary));
 
 // Using this random definition function, write a program that prompts the user with the definition, and then asks them for the correlating term. If they enter the appropriate term, remove it from the inversedDictionary and prompt them with another random definition. If they enter the incorrect term, continue to prompt them until they supply the right term.
 
+let isContinue = true;
+
+// if inversedDictionary is not empty
+while (Object.entries(inversedDictionary).length && isContinue) {
+  const definition = randomDefinition(inversedDictionary);
+  console.log(definition);
+
+  let termGuess = prompt(`The definiton is ${definition}. \nPlease enter the corresponding tech term for this definition.`);
+  if (termGuess === 'exit' || termGuess === null) {
+    isContinue = false;
+  }
+
+  while (inversedDictionary[definition] !== termGuess && termGuess !== 'exit' && termGuess !== null) {
+    termGuess = prompt('Please try again. Enter in another guess for the corresponding tech term');
+  }
+
+  delete inversedDictionary[definition];
+  console.log('Great job. You know your tech terms!');
+}
+
+console.log('Congratulations. You"ve nailed all your tech terms!');
+
 // The program should terminate once there are no terms left in the inversedDictionary. Feel free to create a shortened version to help with your testing.
