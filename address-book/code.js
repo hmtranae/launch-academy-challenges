@@ -10,19 +10,33 @@ const addressBook = {
 let isContinue = false;
 
 while (!isContinue) {
+  let toPrint = false;
   const name = prompt('What name would you like to look up in the address book?');
   // escape while loop
   if (name === null || name === 'exit') {
     isContinue = true;
   } else {
     // deals with case insensitive responses
-    const formatName = name
+    let formatName = name
       .toLowerCase()
       .split(' ')
       .map(part => part[0].toUpperCase() + part.slice(1))
       .join(' ');
+
+    // eslint-disable-next-line no-restricted-syntax
+    for (const address in addressBook) {
+      if (address.split(' ')[0] === formatName) {
+        toPrint = true;
+        formatName = address;
+      }
+    }
+
+    if (addressBook[formatName] !== undefined) {
+      toPrint = true;
+    }
+
     // if not in address book
-    if (addressBook[formatName] === undefined) {
+    if (addressBook[formatName] === undefined && toPrint === false) {
       console.log('Name was not found');
       console.log('If you would like to add this name to the address book, please enter "add". \nElse, please press enter.');
       const ifNameNotPresent = prompt('Name not found. \nType "add" to add to address book or press enter to continue');
