@@ -2,7 +2,7 @@
 const data = require('./data');
 
 // How many repositories does LaunchAcademy own?
-console.log(`LaunchAcademy owns ${data.length} repos)`);
+console.log(`LaunchAcademy owns ${data.length} repos`);
 
 // Return the name of the repository that has the largest size.
 let { size } = data[0];
