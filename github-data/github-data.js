@@ -45,9 +45,11 @@ const repoWithLargestStarGazers = data.filter(repo => repo.stargazers_count === 
 console.log(`Repo with the largest number of stargazers is ${repoWithLargestStarGazers}`);
 
 // Return the names of the repos that have a description that is not null.
-const reposWithDescription = data.filter(repo => repo.description !== null).length;
+const reposWithDescription = data.filter(repo => repo.description !== null);
 
-console.log(`Number of repos that have a description that is not null is ${reposWithDescription}`);
+reposWithDescription.forEach((repo) => {
+  console.log(repo.name);
+});
 
 // Use map to create an array of repository descriptions
 // Print each line of the array
