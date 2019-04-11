@@ -190,9 +190,10 @@ while (Object.entries(inversedDictionary).length && isContinue) {
   let termGuess = prompt(`The definiton is ${definition}. \nPlease enter the corresponding tech term for this definition.`);
   if (termGuess === 'exit' || termGuess === null) {
     isContinue = false;
+    break;
   }
 
-  while (inversedDictionary[definition] !== termGuess && termGuess !== 'exit' && termGuess !== null) {
+  while (inversedDictionary[definition].toLowerCase() !== termGuess.toLowerCase() && termGuess !== 'exit' && termGuess !== null) {
     termGuess = prompt('Please try again. Enter in another guess for the corresponding tech term');
   }
 
@@ -200,6 +201,6 @@ while (Object.entries(inversedDictionary).length && isContinue) {
   console.log('Great job. You know your tech terms!');
 }
 
-console.log('Congratulations. You"ve nailed all your tech terms!');
+if (Object.entries(inversedDictionary).length === 0) { console.log('Congratulations. You"ve nailed all your tech terms!'); }
 
 // The program should terminate once there are no terms left in the inversedDictionary. Feel free to create a shortened version to help with your testing.
