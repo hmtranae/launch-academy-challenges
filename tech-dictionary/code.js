@@ -87,17 +87,6 @@ Responsive Web Design: Responsive web design is the practice of designing websit
 SDK (Software Development Kit): SDK is a set of tools for creating specific types of software. SDK’s are released by companies that control the platform the software is being developed for. For instance, apps developed for iOS require the iOS SDK, Windows apps require the .NET Framework SDK, and Java apps require the Java Development Kit.
 Web apps: Web apps are websites that look and feel like an app (as opposed to a series of linked pages). Facebook, Pandora, and Google Docs are all examples of web apps.`;
 
-// const stringArray = termString.split('\n');
-
-// const parentArray = stringArray.map(definition => definition.split(': '));
-
-// const dictionary = {};
-// // eslint-disable-next-line no-restricted-syntax
-// for (const definitionArray of parentArray) {
-//   // eslint-disable-next-line prefer-destructuring
-//   dictionary[definitionArray[0]] = definitionArray[1];
-// }
-
 const makeJsonDictionary = (string) => {
   const stringArray = string.split('\n');
 
@@ -115,25 +104,33 @@ const makeJsonDictionary = (string) => {
 
 const techDictionary = makeJsonDictionary(termString);
 
-// Write a function numberOfTerms that returns the number of terms in the dictionary. It should take a JSON-based dictionary as its only argument. Output the number of terms for the given dictionary by invoking this function and using console.log.
+// function numberOfTerms
+// returns: the number of terms in the dictionary
+// args: JSON-based dictionary
 
 const numberOfTerms = dict => Object.keys(dict).length;
 
 console.log(numberOfTerms(techDictionary));
 
-// Write a function getTerms that returns an array of all of the terms in the dictionary. It should take a JSON-based dictionary as its only argument. Output the terms array by invoking this function and using console.log.
+// function getTerms
+// returns: an array of all of the terms in the dictionary
+// args: JSON-based dictionary
 
 const getTerms = dict => Object.keys(dict);
 
 console.log(getTerms(techDictionary));
 
-// Write a function getDefinitions that returns an array of all of the definitions in the dictionary. It should take a JSON-based dictionary as its only argument. Output the definitions array by invoking this function and using console.log.
+// function getDefinitions
+// returns: an array of all of the definitions in the dictionary
+// args: JSON-based dictionary
 
 const getDefinitions = dict => Object.values(dict);
 
 console.log(getDefinitions(techDictionary));
 
-// Write a function termsStartingWith that returns an array of all terms starting with a certain character. It should take two arguments. The desired character, and the JSON-based dictionary. Output the terms starting with "D".
+// function termsStartingWith
+// returns: an array of all terms starting with a certain character
+// (2) args: desired character and the JSON-based dictionary
 
 const termsStartingWith = (dict, charToLookup) => {
   const terms = getTerms(dict);
@@ -143,7 +140,9 @@ const termsStartingWith = (dict, charToLookup) => {
 const termsBeginWithD = termsStartingWith(techDictionary, 'D');
 console.log(termsBeginWithD);
 
-// Use the array of all terms starting with D, to create a new array: all of the definitions for the words starting with D. They must appear in the same order. Write a function findDefinitions that takes 2 arguments: an array of terms and the JSON-based dictionary and returns this list of definitions. Output the definitions for words starting with "D".
+// function findDefinitions
+// (2) args: an array of terms and the JSON-based dictionary
+// returns list of definitions. Output the definitions for words starting with "D".
 
 const findDefinitions = (dict, terms) => {
   const definitions = [];
@@ -156,7 +155,9 @@ const findDefinitions = (dict, terms) => {
 
 console.log(findDefinitions(techDictionary, termsBeginWithD));
 
-// Write a function inverseDictionary that takes a JSON-based dictionary as a single argument. This function should take this dictionary and return its inverse: where the definitions are the property names and the terms are the values. Invoke this function and save the return value to a variable inversedDictionary
+// function inverseDictionary
+// args: JSON-based dictionary.
+// return: dictionary's inverse, where the definitions are properties and the terms are the values
 
 const inverseDictionary = (dict) => {
   const reverseDict = {};
@@ -169,7 +170,9 @@ const inverseDictionary = (dict) => {
 const inversedDictionary = inverseDictionary(techDictionary);
 console.log(inversedDictionary);
 
-// Write a function randomDefinition that takes a single argument - an inverted dictionary. This function should return a random definition chosen from the properties of the inverted dictionary.
+// function randomDefinition
+// args: an inverted dictionary
+// return: a random definition chosen from the properties of the inverted dictionary.
 
 const randomDefinition = (invertedDict) => {
   const definitions = getTerms(invertedDict);
@@ -178,7 +181,12 @@ const randomDefinition = (invertedDict) => {
 
 console.log(randomDefinition(inversedDictionary));
 
-// Using this random definition function, write a program that prompts the user with the definition, and then asks them for the correlating term. If they enter the appropriate term, remove it from the inversedDictionary and prompt them with another random definition. If they enter the incorrect term, continue to prompt them until they supply the right term.
+// Use random definition function
+// 1. prompts the user with the definition
+// 2. asks them for the correlating term
+// 3. if they enter the appropriate term, remove it from the inversedDictionary
+// 4. prompt them with another random definition
+// 5. if they enter the incorrect term, continue to prompt them until they supply the right term.
 
 let isContinue = true;
 
@@ -202,5 +210,3 @@ while (Object.entries(inversedDictionary).length && isContinue) {
 }
 
 if (Object.entries(inversedDictionary).length === 0) { console.log('Congratulations. You"ve nailed all your tech terms!'); }
-
-// The program should terminate once there are no terms left in the inversedDictionary. Feel free to create a shortened version to help with your testing.
