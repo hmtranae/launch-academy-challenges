@@ -49,7 +49,9 @@ const reposWithDescription = data.filter(repo => repo.description !== null).leng
 
 console.log(`Number of repos that have a description that is not null is ${reposWithDescription}`);
 
-// Use the .map function to create an array of repository descriptions. Print each line of the array, & if the repo has no description, return the string 'No Description Provided'.
+// Use map to create an array of repository descriptions
+// Print each line of the array
+// If the repo has no description, return the string 'No Description Provided'.
 const repoDescriptions = data.map(repo => repo.description);
 repoDescriptions.forEach((description) => {
   if (description) {
@@ -59,13 +61,19 @@ repoDescriptions.forEach((description) => {
   }
 });
 
-// Use .map once again to create an array containing each repository's most important information. We want to know the name of the repository, who created it (the owner), and how many watchers there are. Print each string in the array to your console. Be sure to look over your final data carefully to ensure ALL the data is showing up the way you want!
-
+// Use map to create an array containing each repository's most important information
+// name of the repository, who created it (the owner), and how many watchers there are
+// Print each string in the array to your console
+const repoImportantInfo = data.map(repo => [repo.name, repo.owner, repo.watchers_count]);
+repoImportantInfo.forEach((repo) => {
+  console.log(`Name: ${repo[0]}, Owner: ${repo[1]}, Number of Watchers: ${repo[2]}`);
+});
 
 // What 2 keys are inside monkey_party's license object?
-
+console.log(Object.keys(data[0].license));
 
 // What is the value of monkey_party's license url?
-
+console.log(data[0].license.url);
 
 // What's the current value of the booster repo's owner permissions object?
+console.log(data[1].owner.permissions.admin);
