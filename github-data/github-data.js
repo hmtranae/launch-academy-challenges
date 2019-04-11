@@ -45,10 +45,19 @@ const repoWithLargestStarGazers = data.filter(repo => repo.stargazers_count === 
 console.log(`Repo with the largest number of stargazers is ${repoWithLargestStarGazers}`);
 
 // Return the names of the repos that have a description that is not null.
+const reposWithDescription = data.filter(repo => repo.description !== null).length;
 
+console.log(`Number of repos that have a description that is not null is ${reposWithDescription}`);
 
 // Use the .map function to create an array of repository descriptions. Print each line of the array, & if the repo has no description, return the string 'No Description Provided'.
-
+const repoDescriptions = data.map(repo => repo.description);
+repoDescriptions.forEach((description) => {
+  if (description) {
+    console.log(description);
+  } else {
+    console.log('No Description Provided');
+  }
+});
 
 // Use .map once again to create an array containing each repository's most important information. We want to know the name of the repository, who created it (the owner), and how many watchers there are. Print each string in the array to your console. Be sure to look over your final data carefully to ensure ALL the data is showing up the way you want!
 
