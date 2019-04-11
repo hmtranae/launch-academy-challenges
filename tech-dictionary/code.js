@@ -87,6 +87,10 @@ Responsive Web Design: Responsive web design is the practice of designing websit
 SDK (Software Development Kit): SDK is a set of tools for creating specific types of software. SDK’s are released by companies that control the platform the software is being developed for. For instance, apps developed for iOS require the iOS SDK, Windows apps require the .NET Framework SDK, and Java apps require the Java Development Kit.
 Web apps: Web apps are websites that look and feel like an app (as opposed to a series of linked pages). Facebook, Pandora, and Google Docs are all examples of web apps.`;
 
+// function makeJsonDictionary
+// returns a dictionary key value pairs of term, definition
+// args: string where each newline is a term definition pair separated by ': '
+
 const makeJsonDictionary = (string) => {
   const stringArray = string.split('\n');
 
@@ -195,6 +199,7 @@ while (Object.entries(inversedDictionary).length && isContinue) {
   const definition = randomDefinition(inversedDictionary);
   console.log(definition);
 
+  // eslint-disable-next-line no-alert
   let termGuess = prompt(`The definiton is ${definition}. \nPlease enter the corresponding tech term for this definition.`);
   if (termGuess === 'exit' || termGuess === null) {
     isContinue = false;
@@ -202,6 +207,7 @@ while (Object.entries(inversedDictionary).length && isContinue) {
   }
 
   while (inversedDictionary[definition].toLowerCase() !== termGuess.toLowerCase() && termGuess !== 'exit' && termGuess !== null) {
+    // eslint-disable-next-line no-alert
     termGuess = prompt('Please try again. Enter in another guess for the corresponding tech term');
   }
 
