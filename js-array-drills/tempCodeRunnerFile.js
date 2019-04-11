@@ -49,11 +49,9 @@ const whichTeacher = (student) => {
   let teacher;
   rooms.forEach((room, index) => {
     if (room.includes(student)) {
-      teacher = teachers[index];
-      return teacher;
+      return teachers[index];
     }
   });
-  console.log(teacher);
   return teacher;
 };
 
