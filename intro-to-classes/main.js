@@ -10,5 +10,3 @@ class Person {
 }
 
 const jonSnow = new Person('Jon', 'Snow');
-
-console.log(jonSnow);
