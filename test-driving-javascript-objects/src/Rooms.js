@@ -1,6 +1,7 @@
 class Room {
-  constructor(name) {
+  constructor(name, maxOccupancy) {
     this.name = name
+    this.maxOccupancy = maxOccupancy
   }
 }
 

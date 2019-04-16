@@ -1,13 +1,21 @@
 const Room = require("../Rooms")
 
 describe("A room", () => {
-  it("has a name", () => {
-    const roomName = "The Fairmont"
-    const room = new Room(roomName)
-    expect(room.name).toEqual(roomName)
+  let room
+  const name = "The Fairmont"
+  const maxOccupancy = 100
+
+  beforeEach(() => {
+    room = new Room(name, maxOccupancy)
   })
 
-  //   it("has a maximum occupancy", () => {})
+  it("has a name", () => {
+    expect(room.name).toEqual(name)
+  })
+
+  it("has a maximum occupancy", () => {
+    expect(room.maxOccupancy).toEqual(maxOccupancy)
+  })
 
   //   it("is initially unreserved", () => {})
 })
