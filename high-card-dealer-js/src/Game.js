@@ -18,7 +18,9 @@ const printOutCards = hand => {
 }
 
 const printWhoWon = (playerOneScore, playerTwoScore) => {
-    return playerOneScore > playerTwoScore ? 'Player 1 wins the game!' : 'Player 2 wins the game!'
+  return playerOneScore > playerTwoScore
+    ? 'Player 1 wins the game!'
+    : 'Player 2 wins the game!'
 }
 
 console.log(`GAME START! \n`)
