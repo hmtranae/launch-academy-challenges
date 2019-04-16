@@ -17,5 +17,7 @@ describe("A room", () => {
     expect(room.maxOccupancy).toEqual(maxOccupancy)
   })
 
-  //   it("is initially unreserved", () => {})
+  it("is initially unreserved", () => {
+    expect(room.isReserved()).toEqual(false)
+  })
 })
