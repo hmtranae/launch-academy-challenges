@@ -1,0 +1,20 @@
+{
+  "name": "high-card-dealer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "game.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node ./src/Game.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.7.1"
+  },
+  "dependencies": {
+    "global": "^4.3.2",
+    "lodash": "^4.17.11",
+    "ndb": "^1.0.44"
+  }
+}
