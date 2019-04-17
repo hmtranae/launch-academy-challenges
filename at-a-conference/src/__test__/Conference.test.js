@@ -53,6 +53,7 @@ describe('conference registration', () => {
   });
 
   it('Registering for a conference as person with email that\'s already registered, not added to list and register method returns false', () => {
-
+    const personDuplicate = new Person(firstName, lastName, emailAddress);
+    expect(conference.register(personDuplicate)).toEqual(false);
   });
 });
