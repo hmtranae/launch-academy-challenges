@@ -1,10 +1,16 @@
 const Conference = require('../Conference');
+const Person = require('../Person');
+
+let conference;
+const name = 'GDG';
+const maxNumberOfRegistrants = 100;
+
+let person;
+const firstName = 'Hieu';
+const lastName = 'Tran';
+const emailAddress = 'test@example.com';
 
 describe('a conference', () => {
-  let conference;
-  const name = 'GDG';
-  const maxNumberOfRegistrants = 100;
-
   beforeEach(() => {
     conference = new Conference(name, maxNumberOfRegistrants);
   });
@@ -27,5 +33,21 @@ describe('a conference', () => {
 });
 
 describe('conference registration', () => {
+  beforeEach(() => {
+    person = new Person(firstName, lastName, emailAddress);
+  });
 
+  it('Once a conference is created, can call Register with new Person object as argument', () => {
+    expect(conference.register).toBeDefined();
+  });
+
+  it('A Person instance must have a first name, last name, and email address', () => {
+    expect(person.firstName).toBeDefined();
+    expect(person.lastName).toBeDefined();
+    expect(person.emailAddress).toBeDefined();
+  });
+
+  it('The register method returns true if I"ve successfully registered', () => {
+    expect(conference.register(person)).toEqual(true);
+  });
 });

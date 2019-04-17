@@ -5,6 +5,11 @@ class Conference {
     this.attendees = [];
     this.sessions = [];
   }
+
+  // eslint-disable-next-line class-methods-use-this
+  register(person) {
+    return true;
+  }
 }
 
 module.exports = Conference;
