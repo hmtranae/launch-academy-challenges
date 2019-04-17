@@ -1,6 +1,7 @@
 class Session {
-  constructor(title) {
+  constructor(title, personFacilitator) {
     this.title = title;
+    this.personFacilitator = personFacilitator;
   }
 }
 

@@ -1,8 +1,10 @@
 const Conference = require('../Conference');
 const Session = require('../Session');
+const Person = require('../Person');
 
 const conference = new Conference('test', 3);
-const session = new Session('test');
+const person = new Person('Hieu', 'Tran', 'test@example.com');
+const session = new Session('test', person);
 
 describe('Create a new conference session', () => {
   it('should be able to call an addSession method on conference', () => {
@@ -23,6 +25,6 @@ describe('Create a new conference session', () => {
   });
 
   it('session instances should have a Person instance who will serve as the faciliator', () => {
-    expect();
+    expect(session.personFacilitator).toBeDefined();
   });
 });
