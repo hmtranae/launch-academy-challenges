@@ -14,6 +14,10 @@ class Conference {
     this.attendees.push(person.emailAddress);
     return true;
   }
+
+  addSession(session) {
+    this.sessions.push(session);
+  }
 }
 
 module.exports = Conference;
