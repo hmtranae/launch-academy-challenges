@@ -8,7 +8,7 @@ class Conference {
 
   // eslint-disable-next-line class-methods-use-this
   register(person) {
-    if (this.attendees.includes(person.emailAddress)) {
+    if (this.attendees.includes(person.emailAddress) || this.attendees.length === this.maxNumberOfRegistrants) {
       return false;
     }
     this.attendees.push(person.emailAddress);

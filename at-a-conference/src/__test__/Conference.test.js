@@ -3,7 +3,7 @@ const Person = require('../Person');
 
 let conference;
 const name = 'GDG';
-const maxNumberOfRegistrants = 100;
+const maxNumberOfRegistrants = 3;
 
 let person;
 const firstName = 'Hieu';
@@ -55,5 +55,14 @@ describe('conference registration', () => {
   it('Registering for a conference as person with email that\'s already registered, not added to list and register method returns false', () => {
     const personDuplicate = new Person(firstName, lastName, emailAddress);
     expect(conference.register(personDuplicate)).toEqual(false);
+  });
+
+  it('Register for conference that"s reached the maximum of registrants, I"m not added to the list and the register method returns false', () => {
+    conference = new Conference(name, maxNumberOfRegistrants);
+    conference.register(person);
+    conference.register(new Person('test', 'test', '1@example.com'));
+    conference.register(new Person('test', 'test', '2@example.com'));
+    expect(conference.register(new Person('test', 'test', 'notgonnawork@example.com'))).toEqual(false);
+    expect(conference.attendees.length).toEqual(maxNumberOfRegistrants);
   });
 });
