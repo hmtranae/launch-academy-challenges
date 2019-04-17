@@ -17,5 +17,7 @@ describe('perimeter function', () => {
   it('takes in two arguments and returns a positive number', () => {
     expect(perimeter(3, 5)).toBeGreaterThan(0);
     expect(perimeter(3, 5)).toBe(16);
+    expect(perimeter(2, 10)).toBe(24);
+    expect(perimeter(1, 1)).toBe(4);
   });
 });

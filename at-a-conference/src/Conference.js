@@ -11,7 +11,7 @@ class Conference {
     if (this.attendees.includes(person.emailAddress) || this.attendees.length === this.maxNumberOfRegistrants) {
       return false;
     }
-    this.attendees.push(person.emailAddress);
+    this.attendees.push([person.firstName, person.lastName].join(' '));
     return true;
   }
 
