@@ -1,0 +1,7 @@
+---
+title: "At a Conference"
+type: "challenge"
+description: ""
+tags: "javascript, test driven development, jest, object oriented programming"
+ignore:
+- "at-a-conference.md"
