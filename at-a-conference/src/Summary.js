@@ -4,13 +4,11 @@ class Summary {
   }
 
   printConferenceDetails() {
-    console.log('Conference Details! \n');
-    console.log(`Conference Name: ${this.conference.name} \n`);
-    console.log(`Number of registrants: ${this.conference.attendees.length} \n`);
-    console.log('Attendee Names: \n');
+    let message = `Conference Details!\nConference Name: ${this.conference.name}\nNumber of registrants: ${this.conference.attendees.length}\nAttendee Names:\n`;
     this.conference.attendees.forEach((attendees) => {
-      console.log(attendees);
+      message += `${attendees}\n`;
     });
+    return message;
   }
 }
 
