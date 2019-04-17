@@ -39,6 +39,7 @@ describe('conference registration', () => {
 
   it('Once a conference is created, can call Register with new Person object as argument', () => {
     expect(conference.register).toBeDefined();
+    expect(person).toBeInstanceOf(Person);
   });
 
   it('A Person instance must have a first name, last name, and email address', () => {
@@ -49,5 +50,9 @@ describe('conference registration', () => {
 
   it('The register method returns true if I"ve successfully registered', () => {
     expect(conference.register(person)).toEqual(true);
+  });
+
+  it('Registering for a conference as person with email that\'s already registered, not added to list and register method returns false', () => {
+
   });
 });
