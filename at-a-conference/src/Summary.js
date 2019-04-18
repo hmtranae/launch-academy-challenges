@@ -26,6 +26,7 @@ class Summary {
     this.conference.attendees.forEach((attendees) => {
       message += `${attendees}\n`;
     });
+    message += `${this.conference.sessions.length}\n`;
     return message;
   }
 }
