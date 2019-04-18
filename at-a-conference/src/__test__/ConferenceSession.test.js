@@ -5,7 +5,7 @@ const Person = require('../Person');
 const conference = new Conference('test', 3);
 const person = new Person('Hieu', 'Tran', 'test@example.com');
 conference.register(person);
-const session = new Session('test session', person);
+const session = new Session('test session', person, '11:00AM', '3:00PM');
 
 describe('Create a new conference session', () => {
   it('should be able to call an addSession method on conference', () => {
@@ -36,5 +36,13 @@ describe('Create a new conference session', () => {
 
   it('should allow people on the registrants list to addSession, return true', () => {
     expect(conference.addSession(session)).toBe(true);
+  });
+
+  it('should initialize session with start time', () => {
+    expect(session.startTime).toBeDefined();
+  });
+
+  it('should initialize session with end time', () => {
+    expect(session.endTime).toBeDefined();
   });
 });
