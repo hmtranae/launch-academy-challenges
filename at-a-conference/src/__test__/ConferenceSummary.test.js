@@ -21,8 +21,22 @@ describe('Print Conference Summary', () => {
   });
 
   it('should return a list of the attendees first and last name', () => {
-    const expectedString = `Conference Details!\nConference Name: Test Conference\nNumber of registrants: 5\nAttendee Names:\nHieu Tran\nJane Doe\nJohn Doe\nBarry Cho\nLang Pham
-`;
-    expect(summary.printConferenceDetails()).toBe(expectedString);
+    expect(summary.getAttendeesName()).toEqual(conference.attendees);
+  });
+
+  it('should return number of sessions', () => {
+
+  });
+
+  it('should return the titles of each session', () => {
+
+  });
+
+  it('should return the faciliator"s name of each session', () => {
+
+  });
+
+  it('should return if registration is still open', () => {
+
   });
 });
