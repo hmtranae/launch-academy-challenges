@@ -3,12 +3,15 @@ class Snake {
     this.name = name;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   speak() {
-    return 'Sssssire, ssssire, they may be banditsssss';
+    // eslint-disable-next-line quotes
+    return `Sssssire, ssssire, they may be banditsssss`;
   }
 
+  // eslint-disable-next-line class-methods-use-this
   isColdBlooded() {
-    return (true);
+    return true;
   }
 }
 

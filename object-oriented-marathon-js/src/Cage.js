@@ -7,9 +7,7 @@ class Cage {
     if (this.animal === null) {
       return true;
     }
-    
-    return false
-    
+    return false;
   }
 }
 

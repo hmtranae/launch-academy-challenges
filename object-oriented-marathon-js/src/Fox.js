@@ -4,7 +4,7 @@ class Fox {
   }
 
   speak() {
-    return 'Ring-ding-ding-ding-dingeringeding!';
+    return `Ring-ding-ding-ding-dingeringeding!`;
   }
 }
 module.exports = Fox;

@@ -16,7 +16,7 @@ describe('A Zoo', () => {
     expect(zoo.name).toEqual('The First Zoo in Outer Space');
   });
 
-  it.only('should create 10 cages by default, and assign them to the cages property', () => {
+  it('should create 10 cages by default, and assign them to the cages property', () => {
     expect(zoo.cages).toHaveLength(10);
     expect(zoo.cages[0]).toBeInstanceOf(Cage);
   });
@@ -42,7 +42,7 @@ describe('A Zoo', () => {
       const newAnimal = new Fox('Kit');
       zoo.addAnimal(newAnimal);
 
-      expect(zoo.cages[1].animal.name).not.toEqual('Kit');
+      expect(zoo.cages[1].animal).not.toEqual(newAnimal);
     });
 
     it('should return a message that all of the cages are full if cages are filled', () => {
@@ -58,7 +58,7 @@ describe('A Zoo', () => {
       zoo.addAnimal(newAnimal);
       zoo.addAnimal(newAnimal);
 
-      expect(zoo.addAnimal).toEqual('All of the cages are full!');
+      expect(zoo.addAnimal()).toEqual('All of the cages are full!');
     });
   });
 
