@@ -14,4 +14,6 @@ class Employee {
   }
 }
 
-module.exports = Employee;
+const employee = new Employee('Hieu', 'Tran', 'SWE');
+
+console.log(employee);
