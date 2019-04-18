@@ -12,12 +12,16 @@ class Conference {
     || this.attendees.length === this.maxNumberOfRegistrants) {
       return false;
     }
-    this.attendees.push([person.firstName, person.lastName].join(' '));
+    this.attendees.push(person);
     return true;
   }
 
   addSession(session) {
-    this.sessions.push(session);
+    if (this.attendees.includes(session.personFacilitator)) {
+      this.sessions.push(session);
+      return true;
+    }
+    return false;
   }
 }
 

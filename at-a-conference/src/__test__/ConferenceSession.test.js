@@ -4,7 +4,8 @@ const Person = require('../Person');
 
 const conference = new Conference('test', 3);
 const person = new Person('Hieu', 'Tran', 'test@example.com');
-const session = new Session('test', person);
+conference.register(person);
+const session = new Session('test session', person);
 
 describe('Create a new conference session', () => {
   it('should be able to call an addSession method on conference', () => {
@@ -26,5 +27,14 @@ describe('Create a new conference session', () => {
 
   it('session instances should have a Person instance who will serve as the faciliator', () => {
     expect(session.personFacilitator).toBeDefined();
+  });
+
+  it('should not allow people not on the registrants list to addSession, return false', () => {
+    const badSession = new Session('test session not registered', new Person('Jonh', 'Doe', 'abc@example.com'));
+    expect(conference.addSession(badSession)).toBe(false);
+  });
+
+  it('should allow people on the registrants list to addSession, return true', () => {
+    expect(conference.addSession(session)).toBe(true);
   });
 });
