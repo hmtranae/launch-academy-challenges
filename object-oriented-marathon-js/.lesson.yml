@@ -1,0 +1,8 @@
+---
+title: "Object Oriented Marathon JS"
+type: "challenge"
+description: "Build a zoo full of JavaScript animals."
+tags: "oop, exceptions"
+behaviors:
+ignore:
+- "object-oriented-marathon-js.md"

@@ -1,0 +1,10 @@
+class Fox {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    return 'Ring-ding-ding-ding-dingeringeding!';
+  }
+}
+module.exports = Fox;
