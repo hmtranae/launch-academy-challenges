@@ -2,7 +2,6 @@ const Fox = require('../Fox');
 
 describe('A Fox', () => {
   let fox;
-  let foxName;
 
   beforeEach(() => {
     fox = new Fox('Kit');

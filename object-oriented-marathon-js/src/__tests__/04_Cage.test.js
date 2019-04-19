@@ -9,7 +9,8 @@ describe('A Cage', () => {
   });
 
   it('should be created with no animal inside', () => {
-    expect(cage.animal).toEqual(null);
+    // .toBeNull() and toBe(null) are the same but error messages for .toBeNull() are nicer
+    expect(cage.animal).toBeNull();
   });
 
   describe('#isEmpty', () => {

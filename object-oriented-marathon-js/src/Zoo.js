@@ -18,7 +18,6 @@ class Zoo {
     this.employees.push(employee);
   }
 
-  // eslint-disable-next-line consistent-return
   addAnimal(animal) {
     if (this.cages[this.cages.length - 1].animal) {
       return 'All of the cages are full!';
