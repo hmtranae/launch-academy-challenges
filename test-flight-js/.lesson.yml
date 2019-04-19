@@ -1,0 +1,9 @@
+---
+title: "Test Flight JavaScript"
+type: "challenge"
+description: "Test-drive the implementation of an Airplane class."
+behaviors:
+  - ""
+tags: "javascript, node, jest"
+ignore:
+- "test-flight-js.md"
