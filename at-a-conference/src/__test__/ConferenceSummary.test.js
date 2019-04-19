@@ -9,12 +9,12 @@ conference.register(new Person('Jane', 'Doe', 'test1@example.com'));
 conference.register(new Person('John', 'Doe', 'test5@example.com'));
 conference.register(new Person('Barry', 'Cho', 'test2@example.com'));
 
-conference.addSession(new Session('React', 'Hieu Tran', '12:00PM', '5:00PM'));
-conference.addSession(new Session('jQuery', 'Jane Doe', '12:00PM', '5:00PM'));
+conference.addSession(new Session('React', 'Hieu Tran', '12:00 PM', '3:00 PM'));
+conference.addSession(new Session('jQuery', 'Jane Doe', '8:00 AM', '9:00 AM'));
+conference.addSession(new Session('HTML/CSS', 'John Doe', '10:00 AM', '12:00 PM'));
+conference.addSession(new Session('SQL', 'Barry Cho', '7:30 AM', '10:00 AM'));
 
 const summary = new Summary(conference);
-
-console.log(summary.printConferenceDetails());
 
 describe('Print Conference Summary', () => {
   it('should provide the conference name', () => {

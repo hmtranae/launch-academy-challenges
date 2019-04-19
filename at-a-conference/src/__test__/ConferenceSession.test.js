@@ -5,7 +5,7 @@ const Person = require('../Person');
 const conference = new Conference('test', 3);
 const person = new Person('Hieu', 'Tran', 'test@example.com');
 conference.register(person);
-const session = new Session('test session', person, '11:00AM', '3:00PM');
+const session = new Session('test session', 'Hieu Tran', '11:00AM', '3:00PM');
 
 describe('Create a new conference session', () => {
   it('should be able to call an addSession method on conference', () => {
