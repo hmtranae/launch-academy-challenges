@@ -30,7 +30,7 @@ describe('An Employee', () => {
     });
   });
   describe('#greet', () => {
-    it.only("returns a string with the employee's named and a greeting", () => {
+    it("returns a string with the employee's named and a greeting", () => {
       expect(employee.greet()).toEqual('Derek Zoolander waved hello!');
     });
   });

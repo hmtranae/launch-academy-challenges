@@ -23,7 +23,7 @@ describe('A Snake', () => {
   });
 
   describe('#isColdBlooded', () => {
-    it.only('is cold blooded', () => {
+    it('is cold blooded', () => {
       expect(snake.isColdBlooded()).toEqual(true);
     });
   });
