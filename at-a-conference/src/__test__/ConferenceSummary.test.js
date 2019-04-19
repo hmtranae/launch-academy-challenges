@@ -11,7 +11,7 @@ conference.register(new Person('Barry', 'Cho', 'test2@example.com'));
 
 conference.addSession(new Session('React', 'Hieu Tran', '12:00 PM', '3:00 PM'));
 conference.addSession(new Session('jQuery', 'Jane Doe', '8:00 AM', '9:00 AM'));
-conference.addSession(new Session('HTML/CSS', 'John Doe', '10:00 AM', '12:00 PM'));
+conference.addSession(new Session('HTML/CSS', 'Doesn"t Exist', '10:00 AM', '12:00 PM'));
 conference.addSession(new Session('SQL', 'Barry Cho', '7:30 AM', '10:00 AM'));
 
 const summary = new Summary(conference);

@@ -16,28 +16,28 @@ describe('conference registration', () => {
     person = new Person(firstName, lastName, emailAddress);
   });
 
-  it('Once a conference is created, can call Register with new Person object as argument', () => {
+  it('should be able to call Register with new Person instance once conference is created', () => {
     expect(conference.register).toBeDefined();
     expect(person).toBeInstanceOf(Person);
   });
 
-  it('A Person instance must have a first name, last name, and email address', () => {
+  it('should be able to instantiate person with first and last name and email address', () => {
     expect(person.firstName).toBeDefined();
     expect(person.lastName).toBeDefined();
     expect(person.emailAddress).toBeDefined();
   });
 
-  it('The register method returns true if I"ve successfully registered', () => {
+  it('should return true from register method if successfully registered', () => {
     expect(conference.register(person)).toEqual(true);
   });
 
-  it('Registering for a conference as person with email that\'s already registered, not added to list and register method returns false', () => {
+  it('should not register person with email that"s already registered and should return false', () => {
     const personDuplicate = new Person(firstName, lastName, emailAddress);
     conference.register(person);
     expect(conference.register(personDuplicate)).toEqual(false);
   });
 
-  it('Register for conference that"s reached the maximum of registrants, I"m not added to the list and the register method returns false', () => {
+  it('should not register person if conference has reached the max of registrants', () => {
     conference = new Conference(name, maxNumberOfRegistrants);
     conference.register(person);
     conference.register(new Person('test', 'test', '1@example.com'));

@@ -12,7 +12,7 @@ describe('Create a new conference session', () => {
     expect(conference.addSession).toBeDefined();
   });
 
-  it('should take as its argument a new Session object for the addSession method of the Conference class', () => {
+  it('should take as its argument a new Session instance for addSession method of Conference class', () => {
     expect(session).toBeInstanceOf(Session);
   });
 
@@ -21,16 +21,16 @@ describe('Create a new conference session', () => {
     expect(conference.sessions.length).toBe(1);
   });
 
-  it('session instances should be created with a title', () => {
+  it('should expect session instances to have a title', () => {
     expect(session.title).toBeDefined();
   });
 
-  it('session instances should have a Person instance who will serve as the faciliator', () => {
+  it('should expet session instances to have Person instance who will serve as facilitator', () => {
     expect(session.personFacilitator).toBeDefined();
   });
 
   it('should not allow people not on the registrants list to addSession, return false', () => {
-    const badSession = new Session('test session not registered', new Person('Jonh', 'Doe', 'abc@example.com'));
+    const badSession = new Session('test session not registered', new Person('John', 'Doe', 'abc@example.com'));
     expect(conference.addSession(badSession)).toBe(false);
   });
 

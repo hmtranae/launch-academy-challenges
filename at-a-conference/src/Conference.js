@@ -6,7 +6,6 @@ class Conference {
     this.sessions = []; // array of Session instances
   }
 
-  // eslint-disable-next-line class-methods-use-this
   register(person) {
     let shouldRegister = true;
     this.attendees.forEach((attendee) => {
