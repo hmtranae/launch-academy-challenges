@@ -1,0 +1,7 @@
+title: "Cohort Stats JS"
+type: "challenge"
+description: "OOP System Check"
+tags: "system-check, oop, rspec, javascript"
+behaviors:
+ignore:
+  - "cohort-stats-js.md"

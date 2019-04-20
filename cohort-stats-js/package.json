@@ -1,0 +1,15 @@
+{
+  "name": "cohort-stats-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "test:debug": "./node_modules/.bin/ndb yarn run test",
+    "test:watch": "yarn run test --watch"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "ndb": "^1.0.44"
+  }
+}
