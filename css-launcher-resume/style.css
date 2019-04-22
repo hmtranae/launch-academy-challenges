@@ -1,0 +1,27 @@
+*, *:before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  color: rgb(18, 18, 209)
+}
+
+.page-header {
+  color: rgb(218, 31, 31);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  font-size: 1.25em;
+  margin-right: 25px;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+}
