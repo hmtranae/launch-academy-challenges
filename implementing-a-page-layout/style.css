@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #3498DB;
+  padding: 30px
+}
+
+.site-title {
+  color: white;
+  font-weight: bold
+  
+}
+
+.second-block {
+  background-color: #E5F3F4;
+  padding: 20px 0;
+}
+
+.sub-title {
+  color: white;
+  font-weight: normal;
+}
+
+div.quote {
+  background-color: #4ECC72;
+  border: 5px solid #41AD61;
+  margin: 20px auto;
+  padding: 20px;
+  width: 625px;
+}
+
+.quoted-from {
+  text-align: right;
+  font-style: italic;
+}
+
+.try-it-now {
+  background-color: #E74C3C;
+  border-radius: 10px;
+  border: 5px solid #C0392B;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  width: 400px;
+}
+
+.try-it-now h4 {
+  padding: 10px 0;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+div.try-it-now a {
+  color: white;
+  font-style: italic;
+}
+
+div.try-it-now h3 a {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.blue-page-section {
+  background-color: #2C3E50;
+  color: white;
+  padding: 50px 15px;
+}
+
+.blue-page-section h1, p {
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+footer {
+  background-color: #1B2124;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer a {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #2D7CB0;
+}
+
+* {
+  font-family: 'Source Sans Pro';
+}
+
+h1, h3, h4 {
+  font-family: 'Alegreya';
+}
