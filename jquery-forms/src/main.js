@@ -7,12 +7,13 @@ $(() => {
     $(this).delay(450 * index).fadeIn(1600);
   }
 
-  $('li').hide().each(fadeIn);
-
-  $newItemForm.on('submit', (event) => {
+  const onFormSubmit = (event) => {
     event.preventDefault();
     const text = $('input:text').val();
     $list.append(`<li class="cool">${text}</li>`);
     $('input:text').val('');
-  });
+  };
+
+  $('li').hide().each(fadeIn);
+  $newItemForm.on('submit', onFormSubmit);
 });
