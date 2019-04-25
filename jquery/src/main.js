@@ -20,9 +20,11 @@ $(document).ready(() => {
     $('#zaftigs img').toggle();
   });
 
-  $('#restaurant-button').click(() => {
+  const onFormSubmit = () => {
     const newRestaurant = $('#restaurant-name').val();
     $('ul').append(`<li><strong>${newRestaurant}</strong></li>`);
     $('#restaurant-name').val('');
-  });
+  };
+
+  $('#restaurant-button').click(onFormSubmit);
 });
