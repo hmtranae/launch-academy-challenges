@@ -1,15 +1,13 @@
 // SHORTHAND FOR DOCUMENT.READY()
 $(() => {
-  let $list;
-  let $newItemForm;
-  let $newItemButton;
-  const item = '';
-  $list = $('ul');
-  $newItemForm = $('#newItemForm');
+  const $list = $('ul');
+  const $newItemForm = $('#newItemForm');
 
-  $('li').hide().each(function (index) { // Hide list items
-    $(this).delay(450 * index).fadeIn(1600); // Then fade them in
-  });
+  function fadeIn(index) {
+    $(this).delay(450 * index).fadeIn(1600);
+  }
+
+  $('li').hide().each(fadeIn);
 
   $newItemForm.on('submit', (event) => {
     event.preventDefault();
