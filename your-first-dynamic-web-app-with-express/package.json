@@ -1,0 +1,18 @@
+{
+  "name": "your-first-dynamic-web-app-with-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon src/app.js",
+    "dev:debug": "./node_modules/.bin/nodemon src/app.js --inspect-brk"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  }
+}
