@@ -9,6 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "extraterrestrial": "0.0.4"
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "extraterrestrial": "0.0.4",
+    "morgan": "^1.9.1"
   }
 }

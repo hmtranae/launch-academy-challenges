@@ -1,0 +1,7 @@
+---
+title: "Space Industries Inc"
+type: "challenge"
+description: "Time to make a website for your company"
+tags: "css, html, DOM, jQuery, javascript"
+ignore:
+- "space-industries-inc.md"
