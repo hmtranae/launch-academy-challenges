@@ -1,0 +1,14 @@
+<h2>Hiking Supplies</h2>
+
+<ul>
+  {{#each supplies }}
+  <li>{{ this }}</li>
+  {{/each}}
+</ul>
+
+<form action='/supplies' method='post'>
+  <label for='itemName'>New Item:</label>
+  <input type='text' id='itemName' name='itemName'>
+
+  <input type='submit'>
+</form>
