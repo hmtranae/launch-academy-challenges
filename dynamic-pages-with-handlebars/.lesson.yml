@@ -1,0 +1,7 @@
+---
+title: "Dynamic Pages with Handlebars"
+type: "article"
+description: ""
+tags: "javascript, handlebars, views, templates, express"
+ignore:
+- "dynamic-pages-with-handlebars.md"
