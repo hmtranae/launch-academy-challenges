@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-  const tasks = fs.readFileSync(tasksPath).toString().split('\n');
+  const tasks = fs.readFileSync(tasksPath, 'utf8').split('\n');
   // remove the blank new line at the end of the file
   tasks.pop();
   res.render('index', { tasks });

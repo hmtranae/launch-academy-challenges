@@ -28,8 +28,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   const supplies = fs
-    .readFileSync(suppliesPath)
-    .toString()
+    .readFileSync(suppliesPath, 'utf8')
     .split('\n');
   // remove the blank new line at the end of the file
   supplies.pop();
