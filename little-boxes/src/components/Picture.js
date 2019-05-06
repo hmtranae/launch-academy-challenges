@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Picture = props => {
-  const { url } = props;
+  const { header, url, imgAlt } = props;
   return (
     <div className='box picture'>
-      <h1>Look at This Picture</h1>
-      <img alt='Clever EEs' src={url} />
+      <h1>{header}</h1>
+      <img alt={imgAlt} src={url} />
     </div>
   )
 }

@@ -13,6 +13,8 @@ const Wrapper = props => {
         header="Today's Date and Random Number"
       />
       <Picture
+        header='Look at This Picture'
+        imgAlt='Clever EEs'
         url='https://s3.amazonaws.com/horizon-production/images/react-clever-ees.png'
       />
       <h1>{header}</h1>
