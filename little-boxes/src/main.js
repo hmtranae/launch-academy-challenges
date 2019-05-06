@@ -4,7 +4,9 @@ import ReactDOM from 'react-dom';
 
 import style from './styles/app.scss'
 
-import Wrapper from './components/Wrapper';
+// import Wrapper from './components/Wrapper';
+import Box from './components/Box';
+
 // import Picture from './components/Picture';
 // import List from './components/List';
 // import Numbers from './components/Numbers';
@@ -13,9 +15,10 @@ let wrapperParagraph = 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
 
 ReactDOM.render(
   <div>
-    <Wrapper
+    <Box
+      propsBoxClass='wrapper'
       header='I am the Wrapper'
-      paragraph={wrapperParagraph}
+      propsParagraph={wrapperParagraph}
     />
   </div>,
   document.getElementById('app')
