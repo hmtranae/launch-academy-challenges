@@ -1,0 +1,51 @@
+/* YOUR STYLING HERE */
+
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+h6, p {
+  font-size: 11px;
+  color: #403D3E;
+  font-weight: bold;
+}
+
+span {
+  color: rgb(134, 144, 153);
+}
+
+i {
+  cursor: pointer;
+  opacity: .8;
+}
+
+.tweets {
+  margin: 10px auto;
+  width: 475px;
+  border: 2px solid #353535;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.tweet-image {
+  width: 350px;
+}
+
+.icon-margin {
+  margin-left: 50px;
+}
+
+.icon-count {
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.icon-retweet {
+  color: #4CCF86;
+}
+
+.icon-heart {
+  color: #E33F4E;
+}
