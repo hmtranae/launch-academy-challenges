@@ -1,0 +1,19 @@
+<h1>Welcome Coder</h1>
+<p>All the gear a Launcher Needs</p>
+
+<p><a href="/new">Add a new product</a></p>
+
+<ul>
+  {{#each products}}
+  {{#if this.featured}}
+  <li>
+    <p>
+      <a href='/show/{{this.name}}'>
+        Name: {{this.name}}
+      </a>
+    </p>
+    <p>Price: ${{this.price}}</p>
+  </li>
+  {{/if}}
+  {{/each}}
+</ul>

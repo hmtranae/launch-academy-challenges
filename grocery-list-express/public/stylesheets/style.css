@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+}
+
+li {
+  text-align: left;
+  width: 150px;
+  margin: 0 auto;
+}
+
+span {
+  font-size: 10px;
+}
+
+a, a:visited, a:hover, a:active {
+  color: #0000EE;
+  text-decoration: none;
+}
+
+label {
+  width: 175px;
+  text-align: left;
+  display: inline-block
+}
+
+.error {
+  color: red;
+}
+
+.button {
+  border-radius: 5px;
+  padding: 5px 76px;
+  cursor: pointer;
+  color: white;
+  margin-top: 5px;
+}
+
+.submit {
+  background-color: #6cc0e5;
+  border: 2px #6cc0e5 solid;
+}
+
+.delete {
+  background-color: #fb4f4f;
+  border: 2px #fb4f4f solid;
+}

@@ -1,0 +1,26 @@
+<h1>Groceries</h1>
+
+{{#if error}}
+<p class='error'>{{error}}</p>
+{{/if}}
+
+<ul>
+  {{#each groceries}}
+  <li> <a href='/groceries/{{this.name}}'>{{this.name}}</a> </li>
+  {{/each}}
+</ul>
+
+<form method='POST' action='/groceries'>
+  <label for='name'>Name</label>
+
+  <div>
+    <input type="text" id='name' name='name'>
+  </div>
+
+  <label for="quantity">Quantity <span>(optional)</span> </label>
+  <div>
+    <input type="number" id='quantity' name='quantity'>
+  </div>
+
+  <input class='button submit' type="submit" value='Add'>
+</form>

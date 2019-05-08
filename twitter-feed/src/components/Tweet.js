@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const formatDate = (epochDate) => {
   const date = new Date(parseInt(epochDate));
   const month = date.toLocaleString('en-us', { month: 'long' });
@@ -11,6 +10,7 @@ const formatDate = (epochDate) => {
 
 const Tweet = (props) => {
   let { profilePic, name, username, tweetContent, tweetImage, retweetCount, favoriteCount, date, liked, retweeted } = props;
+
   const onClickReply = (event) => {
     const classList = [...event.target.classList];
     if (classList.includes('fa-reply')) {
@@ -33,6 +33,7 @@ const Tweet = (props) => {
         <div className='cell small-12'>
 
           <div className='media-object'>
+
             <div className="media-object-section">
               <div className='thumbnail'>
                 <img src={profilePic} alt="user profile pic" />

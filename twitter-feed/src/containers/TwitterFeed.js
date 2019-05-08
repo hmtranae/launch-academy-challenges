@@ -10,13 +10,12 @@ const TwitterFeed = (props) => {
   const tweets = data.map(tweet => {
     return (
       <Tweet
-        tweet={tweet}
+        key={parseInt(tweet.id_str)}
         liked={tweet.liked}
         retweeted={tweet.retweeted}
         date={tweet.timestamp_ms}
         retweetCount={tweet.retweet_count}
         favoriteCount={tweet.favorite_count}
-        key={parseInt(tweet.id_str)}
         profilePic={tweet.user.profile_image_url}
         name={tweet.user.name}
         username={tweet.user.screen_name}

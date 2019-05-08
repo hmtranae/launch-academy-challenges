@@ -31,11 +31,11 @@ class App extends React.Component {
         <div className="letter-body">
           <div className="small-12 small-centered text-center columns">
             <input onChange={this.handleCheckboxChange} type="checkbox" />
-            <label>
+            <label htmlFor='blah'>
               <h5>Rejected?</h5>
             </label>
           </div>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Hogwarts_coat_of_arms_colored_with_shading.svg/2000px-Hogwarts_coat_of_arms_colored_with_shading.svg.png" id="hogwarts-logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Hogwarts_coat_of_arms_colored_with_shading.svg/2000px-Hogwarts_coat_of_arms_colored_with_shading.svg.png" id="hogwarts-logo" alt='blah' />
           <h1>HOGWARTS SCHOOL OF WITCHCRAFT AND WIZARDRY</h1>
           <br />
           <h3 id="headmaster-name">Headmaster: Albus Dumbledore</h3>

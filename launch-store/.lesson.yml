@@ -1,0 +1,7 @@
+---
+title: "launch-store"
+type: "challenge"
+description: ""
+tags: "express,marathon,nodejs,javascript,http"
+ignore:
+- "launch-store.md"

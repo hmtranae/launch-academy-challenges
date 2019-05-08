@@ -1,0 +1,32 @@
+{{#if error}}
+<p style='color: red;'>{{ error }}</p>
+{{/if}}
+
+<p><a href="/">Go back to product list</a></p>
+
+<form action="/new" method="POST">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" name='name' id='name'>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="description">Description: </label>
+    <input type="text" name='description' id='description' value={{product.description}}>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="price">Price: </label>
+    <input type="number" name='price' id='price'>
+  </div>
+
+  <br>
+
+  <div><input type='checkbox' name='featured' id='checkbox' value='true'> Featured</div>
+
+  <input type="submit">
+</form>

@@ -8,4 +8,3 @@ behaviors:
 ignore:
 - "node_modules/"
 - "react-notes-stateful.md"
----
